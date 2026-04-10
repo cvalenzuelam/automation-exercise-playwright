@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { getRandomEmail, getRandomPassword, getRandomName } from '../../utils/data-generator';
 import { VALID_USER } from '../../data/user-data';
 
-test.describe('API: Create and Delete Account @api', () => {
+test.describe.serial('API: Create and Delete Account @api', () => {
     
     // Almacenaremos las credenciales generadas para usarlas en el test de borrado
     const testUser = {

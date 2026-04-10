@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { VALID_USER } from '../../data/user-data';
 
-test.describe('API: User authentication @api', () => {
+test.describe.serial('API: User authentication @api', () => {
     
     test('API 7: POST To Verify Login with valid details', async ({ request }) => {
         const response = await request.post('/api/verifyLogin', {
