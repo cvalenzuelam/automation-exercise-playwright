@@ -9,7 +9,10 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: 2,
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  reporter: [
+    ['html'],
+    ['allure-playwright', { outputFolder: 'allure-results' }]
+  ],
   use: {
     baseURL: 'https://automationexercise.com',
     trace: 'on-first-retry',
