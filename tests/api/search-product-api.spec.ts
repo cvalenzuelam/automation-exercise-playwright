@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('API: Search Product @api', () => {
+test.describe.serial('API: Search Product @api', () => {
     test('API 5: POST To Search Product', async ({ request }) => {
         const response = await request.post('/api/searchProduct', {
             form: {

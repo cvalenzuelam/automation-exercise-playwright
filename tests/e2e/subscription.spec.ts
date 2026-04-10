@@ -21,6 +21,7 @@ test.describe('Automation Exercise - Subscription @subscription', () => {
             await footer.verifySuccessMessageVisible();
         });
     });
+    //test
 
     test('Verify Subscription in Cart page', async ({ footer, header }) => {
         await test.step('Click Cart button', async () => {
