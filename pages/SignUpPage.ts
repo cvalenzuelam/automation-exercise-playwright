@@ -80,6 +80,7 @@ export class SignUpPage extends BasePage {
     async completeRegistration(name: string, email: string) {
         await this.fillSignUpForm(name, email);
         await this.fillAddressInformation();
+
     }
 
     async verifyIsLoaded() {
