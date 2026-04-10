@@ -8,8 +8,11 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: 2,
-  workers: process.env.CI ? 3 : undefined,
-  reporter: 'html',
+  workers: process.env.CI ? 2 : undefined,
+  reporter: [
+    ['html'],
+    ['allure-playwright', { outputFolder: 'allure-results' }]
+  ],
   use: {
     baseURL: 'https://automationexercise.com',
     trace: 'on-first-retry',
