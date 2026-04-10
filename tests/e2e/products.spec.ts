@@ -10,8 +10,6 @@ test.describe('Automation Exercise - Products @products', () => {
         await test.step('Navigate to Products page', async () => {
             await homePage.header.clickProducts();
             await productsPage.verifyIsLoaded();
-            // FALLO INTENCIONAL PARA CI
-            await expect(page.getByText('ESTE TEXTO NO EXISTE - FALLO QA')).toBeVisible({ timeout: 5000 });
         });
 
         await test.step('Verify user is navigated to ALL PRODUCTS page successfully and products list is visible', async () => {
